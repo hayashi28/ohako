@@ -253,13 +253,16 @@
         margin-top: 40px; } }
 
 .news {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 1240px;
+  width: 70%;
   margin: 0 auto; }
+  .news__block {
+    display: flex;
+    justify-content: space-between; }
+    .news__block:not(:last-child) {
+      margin-bottom: 30px; }
   .news a {
     display: block;
+    flex: 1;
     color: #333;
     font-size: 14px;
     text-decoration: none; }
