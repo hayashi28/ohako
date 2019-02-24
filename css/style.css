@@ -1,8 +1,13 @@
+header {
+  position: fixed;
+  width: 100%; }
+
 .header {
   font-family: brandon-grotesque, sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 85px;
   padding: 0 20px;
   background-color: rgba(26, 192, 232, 0.8);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
@@ -38,7 +43,7 @@
 
 .keyvisual {
   font-family: brandon-grotesque, sans-serif;
-  padding: 120px 0 180px;
+  padding: 200px 0 150px;
   background-color: rgba(26, 192, 232, 0.8); }
   .keyvisual__title {
     margin-bottom: 20px;
@@ -93,7 +98,7 @@
       font-size: 12px; } }
 
 .section {
-  padding: 60px 0;
+  padding: 60px 0 70px;
   background-color: #f3f7f8; }
   .section__title {
     position: relative;
@@ -127,6 +132,7 @@
   .section__desc {
     margin-bottom: 62px;
     font-size: 15px;
+    line-height: 1.8;
     text-align: center; }
   .section__btnWrapper {
     text-align: center; }
@@ -182,7 +188,8 @@
     font-size: 21px; }
   .serviceItem__text {
     color: #a1abae;
-    font-size: 13px; }
+    font-size: 13px;
+    line-height: calc(24/13); }
 
 @media screen and (max-width: 480px) {
   .serviceItem {
@@ -208,7 +215,7 @@
     display: block;
     width: 100%; }
   .worksItem__block {
-    padding: 10px;
+    padding: 20px 10px 10px;
     text-align: center; }
   .worksItem__desc {
     margin-bottom: 8px;
@@ -234,12 +241,13 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 1100px;
-    margin: 0 auto 81px; }
+    margin: 0 auto 81px;
+    padding-top: 25px; }
     .clients__block li {
       width: 25%;
-      max-height: 50px;
       list-style: none; }
       .clients__block li img {
+        display: block;
         width: 100%; }
 
 @media screen and (max-width: 480px) {
@@ -294,8 +302,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 0;
-  background: url("../img/contact2.png") no-repeat center;
+  padding: 80px 0 100px;
+  background: url("../img/contact.jpg") no-repeat center;
   background-size: cover; }
 
 @media screen and (max-width: 480px) {
