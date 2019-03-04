@@ -1,6 +1,19 @@
 header {
   position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   width: 100%;
+}
+
+@mixin headerNav-base {
+  display: block;
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 1.2px;
 }
 
 .header {
@@ -16,16 +29,13 @@ header {
     display: flex;
     align-items: center;
     padding: 27px 0;
-    a {
-      display: block;
+    li {
       margin-right: 48px;
-      color: #FFF;
-      font-size: 15px;
-      font-weight: 400;
-      text-decoration: none;
-      letter-spacing: 1.2px;
-      &:last-child {
-        margin-right: 0px;
+      a {
+        @include headerNav-base;
+        &:last-child {
+          margin-right: 0px;
+        }
       }
     }
   }
@@ -33,6 +43,9 @@ header {
     padding: 10px 20px;
     border: solid 1px #FFF;
     border-radius: 3px;
+    a {
+      @include headerNav-base;
+    }
   }
 }
 
@@ -42,8 +55,6 @@ header {
     left: 0;
     width: 100%;
     height: 57px;
-    border-bottom: 1px solid rgba(255,255,255,.2);
-    background: rgba(26,192,232,.8);
     &__block {
       display: none;
     }
@@ -89,7 +100,7 @@ header {
       content: '';
       opacity: 0;
       border-radius: 30px;
-      background: #fff;
+      background-color: #fff;
     }
     &::after {
       position: absolute;
@@ -98,8 +109,7 @@ header {
       width: 60px;
       height: 60px;
       content: '';
-      background-image: url('../img/icon_scrollBtn.svg');
-      background-size: 100%;
+      background: no-repeat center/100% url("../img/icon_scrollBtn.svg");
     }
   }
 }
@@ -227,7 +237,7 @@ header {
   &__text {
     color: #a1abae;
     font-size: 13px;
-    line-height: calc(24/13);
+    line-height: 2;
   }
 }
 
@@ -379,8 +389,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 80px 0 100px;
-  background: url('../img/contact.jpg') no-repeat center;
-  background-size: cover;
+  background: center / cover no-repeat url("../img/contact.jpg"), #eee 35% url("../img/contact.jpg");
 }
 
 @media screen and (max-width: 480px) {
@@ -470,25 +479,27 @@ header {
     }
   }
   border-bottom: 1px solid #ebf0f1;
-  &__lineWrapper {
+  &__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 1240px;
     margin: 0 auto;
   }
-  &__block {
+  &__navBlock {
     display: flex;
     padding: 50px 0;
-    a {
-      display: block;
+    li {
       margin-right: 30px;
-      color: #8c9597;
-      font-size: 16px;
-      text-decoration: none;
-      letter-spacing: 1.8px;
-      &:last-child {
-        margin-right: none;
+      a {
+        display: block;
+        color: #8c9597;
+        font-size: 16px;
+        text-decoration: none;
+        letter-spacing: 1.8px;
+        &:last-child {
+          margin-right: none;
+        }
       }
     }
   }

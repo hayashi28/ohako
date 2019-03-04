@@ -1,5 +1,9 @@
 header {
   position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   width: 100%; }
 
 .header {
@@ -15,29 +19,35 @@ header {
     display: flex;
     align-items: center;
     padding: 27px 0; }
-    .header__block a {
+    .header__block li {
+      margin-right: 48px; }
+      .header__block li a {
+        display: block;
+        color: #FFF;
+        font-size: 15px;
+        font-weight: 400;
+        text-decoration: none;
+        letter-spacing: 1.2px; }
+        .header__block li a:last-child {
+          margin-right: 0px; }
+  .header__btn {
+    padding: 10px 20px;
+    border: solid 1px #FFF;
+    border-radius: 3px; }
+    .header__btn a {
       display: block;
-      margin-right: 48px;
       color: #FFF;
       font-size: 15px;
       font-weight: 400;
       text-decoration: none;
       letter-spacing: 1.2px; }
-      .header__block a:last-child {
-        margin-right: 0px; }
-  .header__btn {
-    padding: 10px 20px;
-    border: solid 1px #FFF;
-    border-radius: 3px; }
 
 @media screen and (max-width: 480px) {
   .header {
     position: fixed;
     left: 0;
     width: 100%;
-    height: 57px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(26, 192, 232, 0.8); }
+    height: 57px; }
     .header__block {
       display: none; } }
 
@@ -78,7 +88,7 @@ header {
       content: '';
       opacity: 0;
       border-radius: 30px;
-      background: #fff; }
+      background-color: #fff; }
     .keyvisual__scrollBtn::after {
       position: absolute;
       top: 0;
@@ -86,8 +96,7 @@ header {
       width: 60px;
       height: 60px;
       content: '';
-      background-image: url("../img/icon_scrollBtn.svg");
-      background-size: 100%; }
+      background: no-repeat center/100% url("../img/icon_scrollBtn.svg"); }
 
 @media screen and (max-width: 480px) {
   .keyvisual {
@@ -189,7 +198,7 @@ header {
   .serviceItem__text {
     color: #a1abae;
     font-size: 13px;
-    line-height: calc(24/13); }
+    line-height: 2; }
 
 @media screen and (max-width: 480px) {
   .serviceItem {
@@ -303,8 +312,7 @@ header {
   align-items: center;
   justify-content: center;
   padding: 80px 0 100px;
-  background: url("../img/contact.jpg") no-repeat center;
-  background-size: cover; }
+  background: center/cover no-repeat url("../img/contact.jpg"), #eee 35% url("../img/contact.jpg"); }
 
 @media screen and (max-width: 480px) {
   .contact {
@@ -380,24 +388,25 @@ header {
         transform: rotate(-45deg);
         border-top: 2px solid #fff;
         border-right: 2px solid #fff; }
-  .footer__lineWrapper {
+  .footer__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 1240px;
     margin: 0 auto; }
-  .footer__block {
+  .footer__navBlock {
     display: flex;
     padding: 50px 0; }
-    .footer__block a {
-      display: block;
-      margin-right: 30px;
-      color: #8c9597;
-      font-size: 16px;
-      text-decoration: none;
-      letter-spacing: 1.8px; }
-      .footer__block a:last-child {
-        margin-right: none; }
+    .footer__navBlock li {
+      margin-right: 30px; }
+      .footer__navBlock li a {
+        display: block;
+        color: #8c9597;
+        font-size: 16px;
+        text-decoration: none;
+        letter-spacing: 1.8px; }
+        .footer__navBlock li a:last-child {
+          margin-right: none; }
 
 @media screen and (max-width: 480px) {
   .footer__scrollBtn {
