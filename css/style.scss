@@ -362,6 +362,9 @@ header {
 @media screen and (max-width: 480px) {
   .news {
     width: 100%;
+    &__block {
+      display: block;
+    }
     a {
       position: relative;
       display: block;
@@ -503,6 +506,23 @@ header {
       }
     }
   }
+  &__snsBlock {
+    display: flex;
+    padding: 50px 0;
+    li {
+      margin-right: 30px;
+      a {
+        display: block;
+        color: #8c9597;
+        font-size: 16px;
+        text-decoration: none;
+        letter-spacing: 1.8px;
+        &:last-child {
+          margin-right: none;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -510,6 +530,34 @@ header {
     &__scrollBtn {
       position: absolute;
       right: 20px;
+    }
+    &__nav {
+      display: block;
+      width: 100%;
+      padding: 0;
+    }
+    &__navBlock {
+      display: block;
+      padding: 40px 0 30px;
+      text-align: center;
+      li {
+        margin-right: 0;
+        padding-bottom: 10px;
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+    &__snsBlock {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0 40px;
+      li {
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
     }
     &__lineWrapper {
       display: flex;
